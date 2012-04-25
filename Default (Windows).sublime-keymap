@@ -1,0 +1,5 @@
+[
+	{
+		"keys":["ctrl+f11"],"command": "wiki_link"
+	}
+]

@@ -1,0 +1,29 @@
+{ "name": "SublimeWiki",
+  "scopeName": "text.SublimeWiki",
+  "fileTypes": ["sublime-wiki"],
+  "patterns": [
+  	{  "name": "markup.underline.link.internal.SublimeWiki",
+  	   "match": "([A-Z][a-z]+){2,}",
+       "comment": "Match WikiWords and make them into links."
+  	},
+    {  "name": "markup.underline.link.external.SublimeWiki",
+       "match": "((?:https?|ftp)://\\S+)",
+       "comment": "Simplest possible web address matcher. If you think this is basic, you should see the one in the Markdown syntax file."
+    },
+    { "name": "string.quoted.double.SublimeWiki",
+      "begin": "\"",
+      "end": "\"",
+      "comment" : "I know I don't need this, but I like strings to be called out."
+    },
+    {  "name": "markup.bold.SublimeWiki",
+       "match": "(\\*\\*|__)(.*?)(\\*\\*|__)",
+       "comment": "Markdown-style bold"
+    },
+    {  "name": "markup.italic.SublimeWiki",
+       "match": "[^\\*_](\\*|_)[^\\*_]+?(\\*|_)[^\\*_]",
+       "comment": "Markdown-style italics"
+
+    }
+  ],
+  "uuid": "14883dd8-b120-4a1e-a4c5-67c5e7815344"
+}
