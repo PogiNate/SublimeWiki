@@ -5,6 +5,7 @@ A simple way to maintain a personal wiki in Sublime Text 2.
 This extension isn't designed to replace wikipedia, or even go on the web at all. This is a flat-file, no-nesting, no-nonsense system designed purely to give you (well, me) a place to catch fleeting thoughts and turn them into something useful. To keep it as fiddle-proof as possible, the list of features is intentionally kept very small.
 
 In other words, It's job is to let you maintain a *personal* wiki without spending too much time on it. 
+Thanks to Andy Hunt for the inspiration. If you haven't yet, I strongly recommend you read [Pragmatic Thinking and Learning](http://www.amazon.com/gp/product/1934356050?ie=UTF8&tag=httpnatedicco-20&linkCode=shr&camp=213733&creative=393185&creativeASIN=1934356050&ref_=sr_1_1&qid=1335329539&sr=8-1) for more excellent tips on how to really use your brain.
 ##How It Works
 1. Create a directory where you want to keep all your files. I recommend setting this up in [DropBox](http://db.tt/WW19iU5) or some similar service so it auto-syncs across your computers.
 2. Create a file with a name like `MainIndex.sublime-wiki` in that directory. The name isn't important, the extension is. Write some stuff in that file, and make sure to put in some `WikiWords`.
