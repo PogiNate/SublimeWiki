@@ -5,7 +5,7 @@ A simple way to maintain a personal wiki in Sublime Text 2.
 This extension isn't designed to replace wikipedia, or even go on the web at all. This is a flat-file, no-nesting, no-nonsense system designed purely to give you (well, me) a place to catch fleeting thoughts and turn them into something useful. To keep it as fiddle-proof as possible, the list of features is intentionally kept very small.
 
 In other words, It's job is to let you maintain a *personal* wiki without spending too much time on it. 
-##How It Works##
+##How It Works
 1. Create a directory where you want to keep all your files. I recommend setting this up in [DropBox](http://db.tt/WW19iU5) or some similar service so it auto-syncs across your computers.
 2. Create a file with a name like `MainIndex.sublime-wiki` in that directory. The name isn't important, the extension is. Write some stuff in that file, and make sure to put in some `WikiWords`.
 3. Any `WikiWords` (i.e. UpperCamelCase) will be converted to internal links.
@@ -24,7 +24,7 @@ In other words, It's job is to let you maintain a *personal* wiki without spendi
 	* URL links
 		* Identified as `markup.underline.external.link.SublimeWiki`.
 
-##How You Could Help## 
+##How You Could Help
 1. I would like to make the WikiWords linker more robust, and possibly find a way to have it identify any words that are the names of other pages in the directory, so that you could use any word as a keyword, a la [Tomboy](http://projects.gnome.org/tomboy/).
 2. Support for external hyperlinks would be nice. Right now they're highlighted, but you can't follow them. If there's a good, cross-platform way to open a link in the default browser that would be great.
 
