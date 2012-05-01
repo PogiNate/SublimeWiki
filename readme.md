@@ -8,12 +8,13 @@ In other words, It's job is to let you maintain a *personal* wiki without spendi
 Thanks to Andy Hunt for the inspiration. If you haven't yet, I strongly recommend you read [Pragmatic Thinking and Learning](http://www.amazon.com/gp/product/1934356050?ie=UTF8&tag=httpnatedicco-20&linkCode=shr&camp=213733&creative=393185&creativeASIN=1934356050&ref_=sr_1_1&qid=1335329539&sr=8-1) for more excellent tips on how to really use your brain.
 ##How It Works
 1. Create a directory where you want to keep all your files. I recommend setting this up in [DropBox](http://db.tt/WW19iU5) or some similar service so it auto-syncs across your computers.
-2. Create a file with a name like `MainIndex.sublime-wiki` in that directory. The name isn't important, the extension is. Write some stuff in that file, and make sure to put in some `WikiWords`.
-3. Any `WikiWords` (i.e. UpperCamelCase) will be converted to internal links.
+2. in Sublime Text, Add your new Personal Wiki folder to a project and save that project. There! That doesn't do much, but it does make your sidebar list all your wiki pages for you.
+3. Create a file with a name like `MainIndex.sublime-wiki` in that directory. The name isn't important, the extension is. Write some stuff in that file, and make sure to put in some `WikiWords`.
+4. Any `WikiWords` (i.e. UpperCamelCase) will be converted to internal links.
    * By default, `Ctrl+F11` is the keystroke to folow a wiki link
    * If a file doesn't exist, you'll be given a new buffer with the default text for a new page.
    * if the file does exist it's opened. Yeah.
-4. This system is sparse by design. There are only five things that get marked:
+5. This system is sparse by design. There are only five things that get marked:
    * WikiLinks
    		* These are identified as `markup.underline.internal.link.SublimeWiki`. You may need to add style rules to your favorite theme to have it render.
 	* Markdown-style `**bold** __markings__` are used. 
