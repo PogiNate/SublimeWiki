@@ -1,25 +1,25 @@
-{ "name": "SublimeWiki",
-  "scopeName": "text.SublimeWiki",
-  "fileTypes": ["sublime-wiki"],
+{ "name": "Wiki",
+  "scopeName": "text.Wiki",
+  "fileTypes": ["wiki","sublime-wiki","swiki"],
   "patterns": [
-  	{  "name": "markup.underline.link.internal.SublimeWiki",
+  	{  "name": "markup.underline.link.internal.Wiki",
   	   "match": "([A-Z][a-z]+){2,}",
        "comment": "Match WikiWords and make them into links."
   	},
-    {  "name": "markup.underline.link.external.SublimeWiki",
+    {  "name": "markup.underline.link.external.Wiki",
        "match": "((?:https?|ftp)://\\S+)",
        "comment": "Simplest possible web address matcher. If you think this is basic, you should see the one in the Markdown syntax file."
     },
-    { "name": "string.quoted.double.SublimeWiki",
+    { "name": "string.quoted.double.Wiki",
       "begin": "\"",
       "end": "\"",
       "comment" : "I know I don't need this, but I like strings to be called out."
     },
-    {  "name": "markup.bold.SublimeWiki",
+    {  "name": "markup.bold.Wiki",
        "match": "(\\*\\*|__)(.*?)(\\*\\*|__)",
        "comment": "Markdown-style bold"
     },
-    {  "name": "markup.italic.SublimeWiki",
+    {  "name": "markup.italic.Wiki",
        "match": "[^\\*_](\\*|_)[^\\*_]+?(\\*|_)[^\\*_]",
        "comment": "Markdown-style italics"
 

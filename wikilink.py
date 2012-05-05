@@ -16,7 +16,7 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
         #TODO: find a way to handle external links too; opening them in a browser window.
         #make sure the word under the cursor an internal link.
 
-        internalLink = "link.internal.SublimeWiki"
+        internalLink = "link.internal.Wiki"
         if internalLink not in self.view.scope_name(location.a):
             #tell the user no
             sublime.status_message("WikiWords only, please.")
@@ -25,7 +25,7 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
             
             #compile the full file name and path.
 
-            new_file = directory+slash+word+".sublime-wiki"
+            new_file = directory+slash+word+".wiki"
             #debug section: uncomment to write to the console
             # print "Location: %d" % location.a
             # print "Selected word is '%s'" % word
@@ -45,5 +45,5 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
                 default_text = "{0}\nWrite about {0} here.".format(word)
                 new_view.insert(new_edit,0,default_text)            
                 new_view.end_edit(new_edit)
-                new_view.set_name("%s.sublime-wiki" % word)
-                new_view.set_syntax_file("Packages/SublimeWiki/SublimeWiki.tmLanguage")
+                new_view.set_name("%s.wiki" % word)
+                new_view.set_syntax_file("Packages/Wiki/Wiki.tmLanguage")
