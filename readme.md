@@ -16,18 +16,39 @@ Thanks to Andy Hunt for the inspiration. If you haven't yet, I strongly recommen
    * if the file does exist it's opened. Yeah.
 5. This system is sparse by design. There are only five things that get marked:
    * WikiLinks
-   		* These are identified as `markup.underline.internal.link.SublimeWiki`. You may need to add style rules to your favorite theme to have it render.
+   		* These are identified as `markup.underline.internal.link.Wiki`. You may need to add style rules to your favorite theme to have it render.
 	* Markdown-style `**bold** __markings__` are used. 
-		* Identified as `markup.bold.SublimeWiki`
+		* Identified as `markup.bold.Wiki`
 	* For that matter, Markdown-esque `_italic_ *strings*` are also supported.
-		* Identified as `markup.italic.SublimeWiki`
+		* Identified as `markup.italic.Wiki`
 	* "Double Quoted Strings"
-		* Identified as `string.quoted.double.SublimeWiki`
+		* Identified as `string.quoted.double.Wiki`
 	* URL links
-		* Identified as `markup.underline.external.link.SublimeWiki`.
+		* Identified as `markup.underline.external.link.Wiki`.
+
+##If Things Aren't Getting Highlighted
+
+It's very possible that your favorite theme doesn't define styles for `markup.bold`, `markup.italic`, or even `markup.underline.internal.link` (although most themes catch that one, because it has `link` in it.)
+If this is the case you can edit your theme file pretty easily, and I've included a snippet to make it even easier.
+
+All themes are stored as `.tmTheme` files, which are really just `.plist` files that have been renamed, which are really just `.xml` files. 
+
+*ANYWAY*
+
+To add style rules for **bold** and *italic* wiki text to your favorite theme simply follow these steps:
+
+1. Open `favoriteTheme.tmTheme` in Sublime Text 2
+2. Do a quick search for `markup.italic` or `markup.bold` and make sure it's not there.
+3. Place your cursor between two `<dict>` elements.
+4. Type `dict{enter}` and the snippet should pop up.
+5. Type "bold" (or italic) into the first completion slot. Watch the fancy joy of snippets that re-use one variable.
+	* Note that one place where your bold or italic choice gets used is the `<fontStyle>` element. Make sure you're typing something that actually __is__ a font style here. If you stick with bold or italic you should be fine. 
+6. Hit tab to go to the color slot. This is where you decide what color works for you, and it has to be in hex. 
+7. Save the file and restart ST2.
+
+Now all your `**bold**` text should be bold and all your `*italic*` text should be slanty. It's just that easy.
 
 ##How You Could Help
-1. I would like to make the WikiWords linker more robust, and possibly find a way to have it identify any words that are the names of other pages in the directory, so that you could use any word as a keyword, a la [Tomboy](http://projects.gnome.org/tomboy/).
+1. I would like to make the WikiWords linker more robust, and possibly find a way to have it identify any words that are the names of other pages in the directory, so that you could use any word as a keyword, á la [Tomboy](http://projects.gnome.org/tomboy/).
 2. Support for external hyperlinks would be nice. Right now they're highlighted, but you can't follow them. If there's a good, cross-platform way to open a link in the default browser that would be great.
-
 
