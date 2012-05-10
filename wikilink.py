@@ -12,14 +12,14 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
         
         #find the word under the cursor
         word = self.view.substr(self.view.word(location.a))
-        
-        #TODO: find a way to handle external links too; opening them in a browser window.
-        #make sure the word under the cursor an internal link.
+        line = self.view.substr(self.view.line(location.a))
 
         internalLink = "link.internal.Wiki"
         if internalLink not in self.view.scope_name(location.a):
-            #tell the user no
-            sublime.status_message("WikiWords only, please.")
+            #try open it in a browser
+            sublime.status_message("try to open " + line)
+            sublime.active_window().run_command('open_url', {"url": line})
+            #sublime.status_message("WikiWords only, please.")
         else:
             #okay, we're good. Keep on keepin' on.        
             
