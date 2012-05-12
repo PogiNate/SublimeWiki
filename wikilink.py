@@ -20,7 +20,7 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
         elif "link.email.Wiki" in self.view.scope_name(location.a):
                 sublime.status_message("try to mail " + scope)
                 sublime.active_window().run_command('open_url', {"url": "mailto:"+scope})
-        else:
+        elif "link.internal.Wiki" in self.view.scope_name(location.a):
             #okay, we're good. Keep on keepin' on.        
             
             #compile the full file name and path.
@@ -47,3 +47,5 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
                 new_view.end_edit(new_edit)
                 new_view.set_name("%s.wiki" % word)
                 new_view.set_syntax_file("Packages/Wiki/Wiki.tmLanguage")
+        else:
+            sublime.status_message("Can only open WikiWords, email addresses or web addresses.")
