@@ -18,7 +18,7 @@
 			<key>match</key>
 			<string>([A-Z][a-z]+){2,}</string>
 			<key>name</key>
-			<string>markup.underline.link.internal.Wiki</string>
+			<string>markup.bold.link.internal.Wiki</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -26,7 +26,15 @@
 			<key>match</key>
 			<string>((?:https?|ftp)://\S+)</string>
 			<key>name</key>
-			<string>markup.underline.link.external.Wiki</string>
+			<string>string.quoted.link.external.Wiki</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>To find email</string>
+			<key>match</key>
+			<string>(\S+)@(\S*)\.(\S+)</string>
+			<key>name</key>
+			<string>string.quoted.link.email.Wiki</string>
 		</dict>
 		<dict>
 			<key>begin</key>

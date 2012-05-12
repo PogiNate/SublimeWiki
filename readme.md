@@ -46,7 +46,7 @@ To add style rules for **bold** and *italic* wiki text to your favorite theme si
 6. Hit tab to go to the color slot. This is where you decide what color works for you, and it has to be in hex. 
 7. Save the file and restart ST2.
 
-Now all your `**bold**` text should be bold and all your `*italic*` text should be slanty. It's just that easy.
+Now all your `**bold**` text should be bold and all your `_italic_` text should be slanty. It's just that easy.
 
 ##How You Could Help
 1. I would like to make the WikiWords linker more robust, and possibly find a way to have it identify any words that are the names of other pages in the directory, so that you could use any word as a keyword, á la [Tomboy](http://projects.gnome.org/tomboy/).

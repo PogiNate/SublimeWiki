@@ -11,15 +11,15 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
         location = self.view.sel()[0]
         
         #find the word under the cursor
-        word = self.view.substr(self.view.word(location.a))
-        
-        #TODO: find a way to handle external links too; opening them in a browser window.
-        #make sure the word under the cursor an internal link.
+        word = self.view.substr(self.view.word(location.a)).replace("*", "")
+        scope = self.view.substr(self.view.extract_scope(location.a)).replace("*", "")
 
-        internalLink = "link.internal.Wiki"
-        if internalLink not in self.view.scope_name(location.a):
-            #tell the user no
-            sublime.status_message("WikiWords only, please.")
+        if "link.external.Wiki" in self.view.scope_name(location.a):
+                sublime.status_message("try to open " + scope)
+                sublime.active_window().run_command('open_url', {"url": scope})
+        elif "link.email.Wiki" in self.view.scope_name(location.a):
+                sublime.status_message("try to mail " + scope)
+                sublime.active_window().run_command('open_url', {"url": "mailto:"+scope})
         else:
             #okay, we're good. Keep on keepin' on.        
             
