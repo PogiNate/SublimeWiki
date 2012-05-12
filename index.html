@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Sublimewiki : A simple system for maintaining a flat-file personal wiki in Sublime Text 2" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Sublimewiki</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/PogiNate/SublimeWiki">View on GitHub</a>
+
+          <h1 id="project_title">Sublimewiki</h1>
+          <h2 id="project_tagline">A simple system for maintaining a flat-file personal wiki in Sublime Text 2</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/PogiNate/SublimeWiki/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/PogiNate/SublimeWiki/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Sublime Wiki</h2>
+
+<p>A simple way to maintain a personal wiki in Sublime Text 2. </p>
+
+<p>This extension isn't designed to replace wikipedia, or even go on the web at all. This is a flat-file, no-nesting, no-nonsense system designed purely to give you (well, me) a place to catch fleeting thoughts and turn them into something useful. To keep it as fiddle-proof as possible, the list of features is intentionally kept very small.</p>
+
+<p>In other words, It's job is to let you maintain a <em>personal</em> wiki without spending too much time on it. 
+Thanks to Andy Hunt for the inspiration. If you haven't yet, I strongly recommend you read <a href="http://www.amazon.com/gp/product/1934356050?ie=UTF8&amp;tag=httpnatedicco-20&amp;linkCode=shr&amp;camp=213733&amp;creative=393185&amp;creativeASIN=1934356050&amp;ref_=sr_1_1&amp;qid=1335329539&amp;sr=8-1">Pragmatic Thinking and Learning</a> for more excellent tips on how to really use your brain.</p>
+
+<h2>How It Works</h2>
+
+<ol>
+<li>Create a directory where you want to keep all your files. I recommend setting this up in <a href="http://db.tt/WW19iU5">DropBox</a> or some similar service so it auto-syncs across your computers.</li>
+<li>in Sublime Text, Add your new Personal Wiki folder to a project and save that project. There! That doesn't do much, but it does make your sidebar list all your wiki pages for you.</li>
+<li>Create a file with a name like <code>MainIndex.wiki</code> in that directory. The name isn't important, the extension is. Write some stuff in that file, and make sure to put in some <code>WikiWords</code>.</li>
+<li>Any <code>WikiWords</code> (i.e. UpperCamelCase) will be converted to internal links.
+
+<ul>
+<li>By default, <code>Ctrl+F11</code> is the keystroke to folow a link.
+
+<ul>
+<li>Hyperlinks now open in your default browser and email links open in your default mail client. (thank you to <a href="https://github.com/stadja">stadja</a> for getting that working! )</li>
+</ul>
+</li>
+<li>If a file doesn't exist, you'll be given a new buffer with the default text for a new page.</li>
+<li>if the file does exist it's opened. Yeah.</li>
+</ul>
+</li>
+<li>This system is sparse by design. There are only  a few things that get marked:
+
+<ul>
+<li>WikiLinks
+
+<ul>
+<li>These are identified as <code>markup.underline.internal.link.Wiki</code>. You may need to add style rules to your favorite theme to have it render.</li>
+</ul>
+</li>
+<li>Email Links
+
+<ul>
+<li>Identified as <code>string.quoted.link.email.Wiki</code>
+</li>
+</ul>
+</li>
+<li>Web Links (i.e. <code>Http://</code> or <code>ftp://</code> links)
+
+<ul>
+<li>Identified as <code>string.quoted.link.external.Wiki</code>
+</li>
+</ul>
+</li>
+<li>Markdown-style <code>**bold** __markings__</code> are used. 
+
+<ul>
+<li>Identified as <code>markup.bold.Wiki</code>
+</li>
+</ul>
+</li>
+<li>For that matter, Markdown-esque <code>_italic_ *strings*</code> are also supported.
+
+<ul>
+<li>Identified as <code>markup.italic.Wiki</code>
+</li>
+</ul>
+</li>
+<li>"Double Quoted Strings"
+
+<ul>
+<li>Identified as <code>string.quoted.double.Wiki</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol><h2>If Things Aren't Getting Highlighted</h2>
+
+<p>It's very possible that your favorite theme doesn't define styles for <code>markup.bold</code>, <code>markup.italic</code>, or even <code>markup.underline.internal.link</code> (although most themes catch that one, because it has <code>link</code> in it.)
+If this is the case you can edit your theme file pretty easily, and I've included a snippet to make it even easier.</p>
+
+<p>All themes are stored as <code>.tmTheme</code> files, which are really just <code>.plist</code> files that have been renamed, which are really just <code>.xml</code> files. </p>
+
+<p><em>ANYWAY</em></p>
+
+<p>To add style rules for <strong>bold</strong> and <em>italic</em> wiki text to your favorite theme simply follow these steps:</p>
+
+<ol>
+<li>Open <code>/Packages/favoriteTheme/favoriteTheme.tmTheme</code> in Sublime Text 2.</li>
+<li>Do a quick search for <code>markup.italic</code> or <code>markup.bold</code> and make sure it's not there.</li>
+<li>Inside the <code>&lt;array&gt;</code> element place your cursor between the closing tag of one <code>&lt;dict&gt;</code> element and the opening tag of the next.</li>
+<li>Type <code>dict{enter}</code> and the snippet should pop up.</li>
+<li>Type "bold" (or italic) into the first completion slot. Watch the fancy joy of snippets that re-use one variable.
+
+<ul>
+<li>Note that one place where your bold or italic choice gets used is the <code>&lt;fontStyle&gt;</code> element. Make sure you're typing something that actually <strong>is</strong> a font style here. If you stick with bold or italic you should be fine. </li>
+</ul>
+</li>
+<li>Hit tab to go to the color slot. This is where you decide what color works for you, and it has to be in hex. </li>
+<li>Save the file and restart ST2.</li>
+</ol><p>Now all your <code>**bold**</code> (or <code>__bold__</code>) text should be bold and all your <code>_italic_</code> (or <code>*italic*</code>) text should be slanty. It's just that easy.</p>
+
+<h2>How You Could Help</h2>
+
+<ol>
+<li>I would like to make the WikiWords linker more robust, and possibly find a way to have it identify (and therefore highlight) any words that are the names of other pages in the directory, so that you could use any word as a keyword, á la <a href="http://projects.gnome.org/tomboy/">Tomboy</a>.</li>
+<li>There's something wrong with my regex for checking <code>_italic_</code> links. They work everywhere but at the beginning of the line. I'm too lazy to figure it out myself right now, but anyone who wants to fix it would have my undying gratitude. For at least twenty minutes. :)</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Sublimewiki maintained by <a href="https://github.com/PogiNate">PogiNate</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
