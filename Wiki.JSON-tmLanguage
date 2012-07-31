@@ -15,6 +15,12 @@
       "end": "\"",
       "comment" : "I know I don't need this, but I like strings to be called out."
     },
+    {
+      "name":"string.quoted.code.Wiki",
+      "begin": "`",
+      "end":"`",
+      "comment": "May as well have code strings called out as well."
+    },
     {  "name": "markup.bold.Wiki",
        "match": "(\\*\\*|__)(.*?)(\\*\\*|__)",
        "comment": "Markdown-style bold"
