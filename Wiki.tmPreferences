@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Wiki</string>
+
+  <key>scope</key>
+  <string>keyword.control.header.Wiki, string.markup.underline.link.internal.Wiki</string>
+  
+  <key>settings</key>
+  <dict>
+    <key>showInSymbolList</key>
+    <integer>1</integer>
+    
+  	<!-- Make sure that not more then 110 characters are sent per line to the method list -->
+    <key>symbolTransformation</key>
+    <string>s/^\s*(.{1,120}).*/$1/</string>
+  </dict>
+  
+</dict>
+</plist>
