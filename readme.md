@@ -13,7 +13,7 @@ Thanks to Andy Hunt for the inspiration. If you haven't yet, I strongly recommen
 2. in Sublime Text, Add your new Personal Wiki folder to a project and save that project. There! That doesn't do much, but it does make your sidebar list all your wiki pages for you.
 3. Create a file with a name like `MainIndex.wiki` in that directory. The name isn't important, the extension is. Write some stuff in that file, and make sure to put in some `WikiWords`.
 4. Any `WikiWords` (i.e. UpperCamelCase) will be converted to internal links.
-	* By default, `Ctrl+F11` is the keystroke to folow a link.
+	* By default, `Ctrl+F11` or `Ctrl+Enter` are the keystrokes to folow a link.
 		* Hyperlinks now open in your default browser and email links open in your default mail client. (thank you to [stadja][] for getting that working! )
 	* If a file doesn't exist, you'll be given a new buffer with the default text for a new page.
 	* if the file does exist it's opened. Yeah.

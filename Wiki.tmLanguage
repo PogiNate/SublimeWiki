@@ -13,13 +13,19 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>match</key>
+			<string>^\s*(\w+.+:\s*$\n?)</string>
+			<key>name</key>
+			<string>keyword.control.header.Wiki</string>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>Match WikiWords and make them into links.</string>
 			<key>match</key>
 			<string>([A-Z][a-z]+){2,}</string>
 			<key>name</key>
-			<string>markup.underline.link.internal.Wiki</string>
-		</dict>
+			<string>string.markup.underline.link.internal.Wiki</string>
+		</dict>		
 		<dict>
 			<key>comment</key>
 			<string>Simplest possible web address matcher. If you think this is basic, you should see the one in the Markdown syntax file.</string>
@@ -66,7 +72,7 @@
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>text.Wiki</string>
+	<string>source.Wiki</string>
 	<key>uuid</key>
 	<string>14883dd8-b120-4a1e-a4c5-67c5e7815344</string>
 </dict>

@@ -1,6 +1,3 @@
-
-wikilink.pyc
-
-Wiki.tmLanguage.cache
-
-wikilink.pyc
+*.pyc
+*.cache
+.DS_Store
