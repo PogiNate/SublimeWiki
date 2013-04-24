@@ -13,12 +13,18 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>match</key>
+			<string>^\s*(\w+.+:\s*$\n?)</string>
+			<key>name</key>
+			<string>keyword.control.header.Wiki</string>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>Match WikiWords and make them into links.</string>
 			<key>match</key>
 			<string>([A-Z][a-z]+){2,}</string>
 			<key>name</key>
-			<string>markup.underline.link.internal.Wiki</string>
+			<string>string.markup.underline.link.internal.Wiki</string>
 		</dict>
 		<dict>
 			<key>comment</key>
