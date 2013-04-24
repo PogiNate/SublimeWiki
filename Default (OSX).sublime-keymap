@@ -1,6 +1,4 @@
 [
-	{
-		"keys":["ctrl+f11"],"command": "wiki_link",
-		"keys":["ctrl+enter"],"command": "wiki_link"
-	}
+  {"keys": ["ctrl+f11"], "command": "wiki_link", "context": [{"key": "selector", "operator": "equal", "operand": "source.Wiki"} ] },
+  {"keys": ["ctrl+enter"], "command": "wiki_link", "context": [{"key": "selector", "operator": "equal", "operand": "source.Wiki"} ] }
 ]
