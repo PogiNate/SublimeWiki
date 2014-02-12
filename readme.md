@@ -55,7 +55,6 @@ Now all your `**bold**` (or `__bold__`) text should be bold and all your `_itali
 
 ##How You Could Help
 1. I would like to make the WikiWords linker more robust, and possibly find a way to have it identify (and therefore highlight) any words that are the names of other pages in the directory, so that you could use any word as a keyword, á la [Tomboy](http://projects.gnome.org/tomboy/).
-2. There's something wrong with my regex for checking `_italic_` links. They work everywhere but at the beginning of the line. I'm too lazy to figure it out myself right now, but anyone who wants to fix it would have my undying gratitude. For at least twenty minutes. :)
 
 [pragLearn]: http://www.amazon.com/gp/product/1934356050?ie=UTF8&tag=httpnatedicco-20&linkCode=shr&camp=213733&creative=393185&creativeASIN=1934356050&ref_=sr_1_1&qid=1335329539&sr=8-1
 [DropBox]: http://db.tt/WW19iU5
