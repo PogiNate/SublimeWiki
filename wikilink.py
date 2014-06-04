@@ -43,6 +43,6 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
                 default_text = "{0}\nWrite about {0} here.".format(word)
                 new_view.run_command('append', {'characters': default_text})
                 new_view.set_name("%s.wiki" % word)
-                new_view.set_syntax_file("Packages/Wiki/Wiki.tmLanguage")
+                new_view.set_syntax_file("Packages/SublimeWiki/Wiki.tmLanguage")
         else:
             sublime.status_message("Can only open WikiWords, email addresses or web addresses.")
