@@ -2,6 +2,8 @@ Sublime Wiki
 ------------
 A simple way to maintain a personal wiki in Sublime Text 2. 
 
+## NOTE: Sublime Wiki is not actively maintained, as I no longer really use Sublime Text. (I went over to the [Dark Side](http://painlessvim.com).)
+
 This extension isn't designed to replace wikipedia, or even go on the web at all. This is a flat-file, no-nesting, no-nonsense system designed purely to give you (well, me) a place to catch fleeting thoughts and turn them into something useful. To keep it as fiddle-proof as possible, the list of features is intentionally kept very small.
 
 In other words, It's job is to let you maintain a *personal* wiki without spending too much time on it. 
@@ -55,6 +57,7 @@ Now all your `**bold**` (or `__bold__`) text should be bold and all your `_itali
 
 ##How You Could Help
 1. I would like to make the WikiWords linker more robust, and possibly find a way to have it identify (and therefore highlight) any words that are the names of other pages in the directory, so that you could use any word as a keyword, á la [Tomboy](http://projects.gnome.org/tomboy/).
+2. Take over this project! I haven't been maintaining it for quite a while now. If you would like to take up the reigns of SublimeWiki that would probably be a good thing.
 
 [pragLearn]: http://www.amazon.com/gp/product/1934356050?ie=UTF8&tag=httpnatedicco-20&linkCode=shr&camp=213733&creative=393185&creativeASIN=1934356050&ref_=sr_1_1&qid=1335329539&sr=8-1
 [DropBox]: http://db.tt/WW19iU5
